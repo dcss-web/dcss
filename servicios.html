@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Servicios – DC Solutions & Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Servicios de DC Solutions & Services: datacenter, infraestructura, networking, cómputo, almacenamiento, SAN, administración de BBDD y consultoría tecnológica." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <div class="logo">
+        <img src="logo-dcss.svg" alt="DC Solutions &amp; Services" />
+        <div class="logo-text">
+          <span>Semper Ad Meliora</span>
+          <span>Datacenter &amp; Infraestructura</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="alianzas.html">Alianzas</a></li>
+          <li><a href="certificaciones.html">Certificaciones</a></li>
+        </ul>
+      </nav>
+      <button class="btn-cta" onclick="window.location.href='contacto.html'">
+        Hablemos de tu datacenter
+      </button>
+    </div>
+  </header>
+  <main>
+
+    <section>
+      <div class="container">
+        <h1 class="section-title">Servicios</h1>
+        <p class="section-subtitle">
+          Somos un equipo de profesionales con más de 15 años en el sector IT público, especializado en
+          servicios y soluciones de datacenter, infraestructura, networking, cómputo, almacenamiento y SAN,
+          complementados con una fuerte experiencia en administración de bases de datos y consultoría tecnológica.
+        </p>
+
+        <div class="grid-3">
+          <article class="card">
+            <span class="card-tag">Datacenter &amp; Cómputo</span>
+            <h3>Arquitectura de CPD</h3>
+            <p>
+              Diseño y despliegue de entornos de datacenter modernos: servidores, plataformas
+              hiperconvergentes y virtualización.
+            </p>
+            <ul>
+              <li>Evaluación de capacidad y consolidación de cargas</li>
+              <li>Virtualización de servidores y escritorios</li>
+              <li>Integración con soluciones de backup y DR</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Networking</span>
+            <h3>Redes LAN, WAN y SD-WAN</h3>
+            <p>
+              Redes fiables, seguras y preparadas para el crecimiento de la organización.
+            </p>
+            <ul>
+              <li>Switching, routing y Wi-Fi corporativo</li>
+              <li>Segmentación, QoS y alta disponibilidad</li>
+              <li>Monitorización y resolución avanzada de incidencias</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Almacenamiento (SAN/NAS)</span>
+            <h3>Soluciones de almacenamiento crítico</h3>
+            <p>
+              Diseño y operación de cabinas, soluciones all-flash/híbridas y entornos SAN/NAS
+              orientados a rendimiento y resiliencia.
+            </p>
+            <ul>
+              <li>Arquitecturas SAN FC / iSCSI</li>
+              <li>Políticas de backup y archivado</li>
+              <li>Estrategias de recuperación ante desastres</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Bases de datos</span>
+            <h3>Administración de BBDD</h3>
+            <p>
+              Operación de bases de datos de misión crítica: instalación, mantenimiento,
+              optimización y alta disponibilidad.
+            </p>
+            <ul>
+              <li>Upgrades, parches y hardening</li>
+              <li>Performance tuning y análisis de cuellos de botella</li>
+              <li>Clustering, replicación y HA</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Servicios gestionados</span>
+            <h3>Operación recurrente</h3>
+            <p>
+              Externalización completa o parcial de la operación de infraestructura y BBDD
+              con SLA adaptados.
+            </p>
+            <ul>
+              <li>Monitorización 24x7</li>
+              <li>Gestión de incidencias, problemas y cambios</li>
+              <li>Informes periódicos y revisión de capacidad</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Consultoría</span>
+            <h3>Consultoría tecnológica independiente</h3>
+            <p>
+              Acompañamiento en decisiones de inversión, modernización y evolución arquitectónica.
+            </p>
+            <ul>
+              <li>Assessments de infraestructura y BBDD</li>
+              <li>Roadmaps de modernización y cloud híbrida</li>
+              <li>Informes ejecutivos para comité de dirección</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        © <span id="year"></span> DC Solutions &amp; Services · Todos los derechos reservados
+      </div>
+      <div class="footer-links">
+        <a href="servicios.html">Servicios</a>
+        <a href="licitaciones.html">Licitaciones</a>
+        <a href="certificaciones.html">Certificaciones</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

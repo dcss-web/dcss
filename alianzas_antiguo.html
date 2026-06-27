@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Alianzas tecnológicas – DC Solutions & Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alianzas y trabajo con fabricantes como Huawei, Oracle, Lenovo y Xfusion para construir soluciones de infraestructura equilibradas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <div class="logo">
+        <img src="logo-dcss.svg" alt="DC Solutions &amp; Services" />
+        <div class="logo-text">
+          <span>Semper Ad Meliora</span>
+          <span>Datacenter &amp; Infraestructura</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="alianzas.html">Alianzas</a></li>
+          <li><a href="certificaciones.html">Certificaciones</a></li>
+        </ul>
+      </nav>
+      <button class="btn-cta" onclick="window.location.href='contacto.html'">
+        Hablemos de tu datacenter
+      </button>
+    </div>
+  </header>
+  <main>
+
+    <section>
+      <div class="container">
+        <h1 class="section-title">Alianzas tecnológicas</h1>
+        <p class="section-subtitle">
+          Trabajamos con fabricantes líderes del sector para ofrecer soluciones equilibradas, soportadas
+          y alineadas con las mejores prácticas de la industria.
+        </p>
+
+        <div class="grid-3">
+          <article class="card">
+            <span class="card-tag">Huawei</span>
+            <h3>Infraestructura y redes de alto rendimiento</h3>
+            <p>
+              Soluciones de cómputo, almacenamiento y networking orientadas a entornos exigentes,
+              con arquitecturas escalables y eficientes.
+            </p>
+            <ul>
+              <li>Servidores y plataformas de virtualización</li>
+              <li>Cabinas de almacenamiento y soluciones all-flash</li>
+              <li>Switching, routing y redes de CPD</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Oracle</span>
+            <h3>Entornos de bases de datos corporativas</h3>
+            <p>
+              Experiencia en diseño y operación de plataformas basadas en tecnologías Oracle, tanto
+              on-premise como en arquitecturas híbridas.
+            </p>
+            <ul>
+              <li>Diseño de arquitecturas de BBDD de misión crítica</li>
+              <li>Alta disponibilidad, RAC y replicación</li>
+              <li>Optimización de rendimiento y licenciamiento</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Lenovo</span>
+            <h3>Cómputo y soluciones de CPD</h3>
+            <p>
+              Plataformas de servidores y soluciones de infraestructura flexibles, fiables y preparadas
+              para cargas de trabajo modernas.
+            </p>
+            <ul>
+              <li>Servidores para virtualización y bases de datos</li>
+              <li>Infraestructuras hiperconvergentes</li>
+              <li>Integración con almacenamiento de terceros</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Xfusion</span>
+            <h3>Infraestructura eficiente y competitiva</h3>
+            <p>
+              Soluciones de cómputo y almacenamiento orientadas a maximizar la relación
+              rendimiento/coste en proyectos de CPD.
+            </p>
+            <ul>
+              <li>Servidores de propósito general y especializado</li>
+              <li>Plataformas para cloud privada y virtualización</li>
+              <li>Integración en arquitecturas híbridas</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Enfoque neutral</span>
+            <h3>La mejor solución para cada caso</h3>
+            <p>
+              Más allá de las marcas, nuestro trabajo consiste en seleccionar la solución que mejor
+              encaja con las necesidades técnicas, económicas y de soporte de cada proyecto.
+            </p>
+            <ul>
+              <li>Comparativas técnicas y funcionales</li>
+              <li>Escenarios de evolución y roadmap</li>
+              <li>Planificación de soporte y mantenimiento</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="alliances-logos">
+          <img src="logo-huawei.png" alt="Huawei" />
+          <img src="logo-oracle.svg" alt="Oracle" />
+          <img src="logo-lenovo.svg" alt="Lenovo" />
+          <img src="logo-xfusion.svg" alt="Xfusion" />
+        </div>
+
+        <p class="section-subtitle" style="margin-top:2rem;">
+          Los logotipos mostrados identifican a los fabricantes con los que trabajamos en proyectos
+          específicos. El uso de las marcas se realiza únicamente a efectos descriptivos.
+        </p>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        © <span id="year"></span> DC Solutions &amp; Services · Todos los derechos reservados
+      </div>
+      <div class="footer-links">
+        <a href="servicios.html">Servicios</a>
+        <a href="licitaciones.html">Licitaciones</a>
+        <a href="certificaciones.html">Certificaciones</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

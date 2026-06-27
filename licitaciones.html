@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Licitaciones públicas IT – DC Solutions & Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Consultoría en licitaciones públicas IT: análisis de pliegos, diseño de soluciones, documentación técnica y acompañamiento en ejecución." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <div class="logo">
+        <img src="logo-dcss.svg" alt="DC Solutions &amp; Services" />
+        <div class="logo-text">
+          <span>Semper Ad Meliora</span>
+          <span>Datacenter &amp; Infraestructura</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="alianzas.html">Alianzas</a></li>
+          <li><a href="certificaciones.html">Certificaciones</a></li>
+        </ul>
+      </nav>
+      <button class="btn-cta" onclick="window.location.href='contacto.html'">
+        Hablemos de tu datacenter
+      </button>
+    </div>
+  </header>
+  <main>
+
+    <section class="licitaciones-bg">
+      <div class="container">
+        <h1 class="section-title">Licitaciones públicas IT</h1>
+        <p class="section-subtitle">
+          DC Solutions &amp; Services ofrece consultoría especializada en licitaciones públicas
+          relacionadas con infraestructuras de CPD, redes, almacenamiento y bases de datos.
+          Acompañamos tanto a integradores y fabricantes como a organismos públicos.
+        </p>
+
+        <div class="steps">
+          <div>
+            <h3 style="margin-bottom:0.6rem;">Servicios para licitadores (integradores, fabricantes)</h3>
+            <ul class="steps-list">
+              <li>
+                <h3>Análisis de viabilidad</h3>
+                <p>Revisión de pliegos técnicos y administrativos para determinar encaje, riesgos y
+                  estrategia de participación.</p>
+              </li>
+              <li>
+                <h3>Diseño de la solución técnica</h3>
+                <p>Definición de arquitecturas de infraestructura, BBDD y servicios ajustadas a los
+                  requisitos y criterios de valoración.</p>
+              </li>
+              <li>
+                <h3>Redacción de documentación</h3>
+                <p>Memorias técnicas, anexos de cumplimiento, planes de proyecto y documentación
+                  de continuidad de negocio.</p>
+              </li>
+              <li>
+                <h3>Acompañamiento en la ejecución</h3>
+                <p>Soporte técnico durante el despliegue y la fase de explotación, incluyendo
+                  handover y documentación final.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="steps-card">
+            <strong style="display:block;margin-bottom:0.4rem;color:var(--green-dark);">
+              Servicios para administraciones públicas
+            </strong>
+            <p>
+              Colaboramos con organismos públicos en la preparación de pliegos técnicos equilibrados,
+              realistas y alineados con las necesidades de los servicios de TI.
+            </p>
+            <ul style="margin-left:1rem;">
+              <li>Definición de alcance y requisitos de servicio</li>
+              <li>Estimación de capacidades, licencias y niveles de soporte</li>
+              <li>Propuestas de criterios de adjudicación y valoración técnica</li>
+              <li>Revisión técnica de ofertas presentadas</li>
+            </ul>
+
+            <div class="pill-row">
+              <span class="pill">Infraestructura de CPD</span>
+              <span class="pill">Redes y seguridad</span>
+              <span class="pill">Almacenamiento y backup</span>
+              <span class="pill">Administración de BBDD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        © <span id="year"></span> DC Solutions &amp; Services · Todos los derechos reservados
+      </div>
+      <div class="footer-links">
+        <a href="servicios.html">Servicios</a>
+        <a href="licitaciones.html">Licitaciones</a>
+        <a href="certificaciones.html">Certificaciones</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

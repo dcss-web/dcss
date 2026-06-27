@@ -1,0 +1,21 @@
+
+/* Updated styles including alliance logo box */
+.alliance-logo-box {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background: #ffffff;
+  border: 1px solid #dde3eb;
+  border-radius: 14px;
+  padding: 0.5rem;
+}
+.alliance-logo-box img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Placeholder (user should merge this block into existing styles.css manually) */
