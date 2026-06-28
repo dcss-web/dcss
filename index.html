@@ -1,21 +1,55 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <title>DC Solutions & Services – Datacenter, Infraestructura y Licitaciones</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="DC Solutions & Services (dcss.es): servicios de datacenter, infraestructura, networking, cómputo, almacenamiento, SAN, administración de bases de datos y consultoría en licitaciones públicas IT." />
+  <meta name="theme-color" content="#008f5a" />
+  <meta name="description" content="Consultoría especializada en infraestructura de datacenter, networking, almacenamiento, bases de datos Oracle y licitaciones públicas IT. Más de 15 años en el sector." />
+  <link rel="canonical" href="https://dcss.es/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DC Solutions &amp; Services" />
+  <meta property="og:title" content="DC Solutions & Services – Datacenter, Infraestructura y Licitaciones" />
+  <meta property="og:description" content="Consultoría especializada en infraestructura de datacenter, networking, almacenamiento, bases de datos Oracle y licitaciones públicas IT. Más de 15 años en el sector." />
+  <meta property="og:url" content="https://dcss.es/" />
+  <meta property="og:image" content="https://dcss.es/img/og-dcss.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://dcss.es/img/og-dcss.png" />
+  <meta name="twitter:title" content="DC Solutions & Services – Datacenter, Infraestructura y Licitaciones" />
+  <meta name="twitter:description" content="Consultoría especializada en infraestructura de datacenter, networking, almacenamiento, bases de datos Oracle y licitaciones públicas IT. Más de 15 años en el sector." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "DC Solutions & Services",
+    "alternateName": "DCSS",
+    "url": "https://dcss.es",
+    "logo": "https://dcss.es/img/logo-dcss.svg",
+    "image": "https://dcss.es/img/og-dcss.png",
+    "description": "Consultoría especializada en infraestructura de datacenter, networking, almacenamiento SAN, bases de datos Oracle y licitaciones públicas IT. Más de 15 años en el sector.",
+    "email": "info@dcss.es",
+    "telephone": "+34681648107",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "ES"
+    },
+    "knowsAbout": ["Datacenter", "Infraestructura IT", "Almacenamiento SAN", "Networking", "Bases de datos Oracle", "Licitaciones públicas IT", "Virtualización", "Ciberseguridad"],
+    "serviceType": "Consultoría de infraestructura IT",
+    "areaServed": "ES"
+  }
+  </script>
 </head>
 <body>
   <header>
     <div class="container navbar">
       <div class="logo">
-        <img src="logo-dcss.svg" alt="DC Solutions &amp; Services" />
+        <img src="img/logo-dcss.svg" alt="DC Solutions &amp; Services" />
         <div class="logo-text">
           <span>Semper Ad Meliora</span>
           <span>Datacenter &amp; Infraestructura</span>
@@ -27,10 +61,14 @@
           <li><a href="servicios.html">Servicios</a></li>
           <li><a href="alianzas.html">Alianzas</a></li>
           <li><a href="certificaciones.html">Certificaciones</a></li>
+          <li><a href="casos-exito.html">Casos de éxito</a></li>
         </ul>
       </nav>
-      <button class="btn-cta" onclick="window.location.href='contacto.html'">
-        Hablemos de tu datacenter
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <button class="btn-cta nav-cta" onclick="window.location.href='contacto.html'">
+        Contacta con nosotros
       </button>
     </div>
   </header>
@@ -132,11 +170,11 @@
         </div>
       </div>
 	          <div class="cert-logos-row">
-          <img src="logo-itil.png" alt="ITIL" />
-          <img src="logo-pmp.png" alt="PMP" />
-          <img src="logo-prince2.jpg" alt="ISO" />
-          <img src="logo-ocp.png" alt="OCP" />
-		  <img src="logo-scrum.png" alt="OCP" />
+          <img loading="lazy" src="img/logo-itil.png" alt="ITIL" />
+          <img loading="lazy" src="img/logo-pmp.png" alt="PMP" />
+          <img loading="lazy" src="img/logo-prince2.jpg" alt="ISO" />
+          <img loading="lazy" src="img/logo-ocp.png" alt="OCP" />
+		  <img loading="lazy" src="img/logo-scrum.png" alt="OCP" />
         </div>
     </section>
 
@@ -151,11 +189,40 @@
         <a href="licitaciones.html">Licitaciones</a>
         <a href="certificaciones.html">Certificaciones</a>
         <a href="contacto.html">Contacto</a>
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html">Privacidad</a>
+        <a href="cookies.html">Cookies</a>
       </div>
     </div>
   </footer>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const navToggle = document.querySelector(".nav-toggle");
+    const navUl = document.querySelector("nav ul");
+    if (navToggle && navUl) {
+      navToggle.addEventListener("click", () => {
+        const open = navUl.classList.toggle("open");
+        navToggle.classList.toggle("open", open);
+        navToggle.setAttribute("aria-expanded", open);
+        navToggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+      });
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest("header")) {
+          navUl.classList.remove("open");
+          navToggle.classList.remove("open");
+          navToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
   </script>
 </body>
 </html>
+
+
+
+
+
+
+
+

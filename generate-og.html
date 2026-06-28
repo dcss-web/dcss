@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Generador OG Image – DCSS</title>
+  <style>
+    body { margin: 0; background: #1a1a2e; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; font-family: sans-serif; gap: 1.5rem; }
+    canvas { border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); max-width: 90vw; }
+    button { padding: 0.7rem 2rem; background: #008f5a; color: white; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; font-weight: 600; }
+    button:hover { background: #00a86b; }
+    p { color: #aaa; font-size: 0.85rem; margin: 0; }
+  </style>
+</head>
+<body>
+  <canvas id="og" width="1200" height="630"></canvas>
+  <button onclick="download()">⬇ Descargar og-dcss.png</button>
+  <p>Guarda el archivo como <strong>og-dcss.png</strong> dentro de la carpeta <strong>img/</strong> del proyecto.</p>
+
+  <script>
+    const canvas = document.getElementById('og');
+    const ctx = canvas.getContext('2d');
+    const W = 1200, H = 630;
+
+    // --- Fondo degradado verde oscuro ---
+    const bg = ctx.createLinearGradient(0, 0, W, H);
+    bg.addColorStop(0,   '#062416');
+    bg.addColorStop(0.6, '#0b3320');
+    bg.addColorStop(1,   '#041a10');
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, W, H);
+
+    // --- Patrón de puntos sutil ---
+    ctx.fillStyle = 'rgba(255,255,255,0.025)';
+    for (let x = 40; x < W; x += 60) {
+      for (let y = 40; y < H; y += 60) {
+        ctx.beginPath();
+        ctx.arc(x, y, 2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    // --- Línea decorativa superior ---
+    ctx.strokeStyle = '#00c97a';
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+    ctx.moveTo(80, 50);
+    ctx.lineTo(W - 80, 50);
+    ctx.stroke();
+
+    // --- Badge "DC" ---
+    const bx = 80, by = 200, bw = 160, bh = 100, br = 18;
+    // Fondo badge verde vibrante
+    const badgeGrad = ctx.createLinearGradient(bx, by, bx + bw, by + bh);
+    badgeGrad.addColorStop(0, '#00c97a');
+    badgeGrad.addColorStop(1, '#008f5a');
+    ctx.fillStyle = badgeGrad;
+    ctx.beginPath();
+    ctx.roundRect(bx, by, bw, bh, br);
+    ctx.fill();
+
+    // Texto "DC"
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 72px Arial, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('DC', bx + bw / 2, by + bh / 2);
+
+    // --- SOLUTIONS ---
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 72px Arial, sans-serif';
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'alphabetic';
+    ctx.fillText('SOLUTIONS', 268, 265);
+
+    // --- & SERVICES ---
+    ctx.fillStyle = 'rgba(255,255,255,0.55)';
+    ctx.font = '400 48px Arial, sans-serif';
+    ctx.fillText('& SERVICES', 270, 325);
+
+    // --- Separador ---
+    ctx.strokeStyle = 'rgba(0,201,122,0.4)';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(80, 375);
+    ctx.lineTo(720, 375);
+    ctx.stroke();
+
+    // --- Tagline ---
+    ctx.fillStyle = 'rgba(255,255,255,0.65)';
+    ctx.font = '300 30px Arial, sans-serif';
+    ctx.textAlign = 'left';
+    ctx.fillText('Datacenter  ·  Infraestructura  ·  Licitaciones IT', 80, 430);
+
+    // --- URL ---
+    ctx.fillStyle = 'rgba(0,201,122,0.8)';
+    ctx.font = '500 26px Arial, sans-serif';
+    ctx.fillText('dcss.es', 80, 490);
+
+    // --- Decoración derecha: círculos concéntricos ---
+    ctx.strokeStyle = 'rgba(0,201,122,0.08)';
+    ctx.lineWidth = 1.5;
+    [120, 200, 280, 360, 440].forEach(r => {
+      ctx.beginPath();
+      ctx.arc(1080, 315, r, 0, Math.PI * 2);
+      ctx.stroke();
+    });
+
+    // Punto central decorativo
+    ctx.fillStyle = 'rgba(0,201,122,0.25)';
+    ctx.beginPath();
+    ctx.arc(1080, 315, 40, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = 'rgba(0,201,122,0.5)';
+    ctx.beginPath();
+    ctx.arc(1080, 315, 16, 0, Math.PI * 2);
+    ctx.fill();
+
+    function download() {
+      const a = document.createElement('a');
+      a.download = 'og-dcss.png';
+      a.href = canvas.toDataURL('image/png');
+      a.click();
+    }
+  </script>
+</body>
+</html>

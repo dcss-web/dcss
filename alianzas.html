@@ -1,20 +1,84 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <title>Alianzas tecnológicas – DC Solutions & Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Alianzas y trabajo con fabricantes como Huawei, Oracle, Lenovo y Xfusion para construir soluciones de infraestructura equilibradas." />
+  <meta name="theme-color" content="#008f5a" />
+  <meta name="description" content="Alianzas con fabricantes líderes: Huawei, Dell, Lenovo, xFusion, Red Hat, Veeam, Microsoft, Fortinet, Google Cloud y más para ofrecer soluciones de infraestructura equilibradas." />
+  <link rel="canonical" href="https://dcss.es/alianzas.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DC Solutions &amp; Services" />
+  <meta property="og:title" content="Alianzas tecnológicas – DC Solutions & Services" />
+  <meta property="og:description" content="Alianzas con fabricantes líderes: Huawei, Dell, Lenovo, xFusion, Red Hat, Veeam, Microsoft, Fortinet, Google Cloud y más para ofrecer soluciones de infraestructura equilibradas." />
+  <meta property="og:url" content="https://dcss.es/alianzas.html" />
+  <meta property="og:image" content="https://dcss.es/img/og-dcss.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://dcss.es/img/og-dcss.png" />
+  <meta name="twitter:title" content="Alianzas tecnológicas – DC Solutions & Services" />
+  <meta name="twitter:description" content="Alianzas con fabricantes líderes: Huawei, Dell, Lenovo, xFusion, Red Hat, Veeam, Microsoft, Fortinet, Google Cloud y más para ofrecer soluciones de infraestructura equilibradas." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <style>
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+      margin-bottom: 0.7rem;
+    }
+    .card-sm {
+      padding: 0.75rem;
+    }
+    .card-sm .card-tag {
+      font-size: 0.78rem;
+      margin-bottom: 0.25rem;
+    }
+    .card-sm h3 {
+      font-size: 0.82rem;
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+      line-height: 1.3;
+    }
+    .card-sm p {
+      font-size: 0.78rem;
+      margin-bottom: 0.4rem;
+      line-height: 1.4;
+    }
+    .card-sm ul {
+      font-size: 0.76rem;
+    }
+    .alliance-logo-box-sm {
+      width: 100%;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+      background: #ffffff;
+      border-radius: 5px;
+    }
+    .alliance-logo-box-sm img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    @media (max-width: 900px) {
+      .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 480px) {
+      .grid-4 { grid-template-columns: minmax(0, 1fr); }
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="container navbar">
       <div class="logo">
-        <img src="logo-dcss.svg" alt="DC Solutions &amp; Services" />
+        <img src="img/logo-dcss.svg" alt="DC Solutions &amp; Services" />
         <div class="logo-text">
           <span>Semper Ad Meliora</span>
           <span>Datacenter &amp; Infraestructura</span>
@@ -26,10 +90,14 @@
           <li><a href="servicios.html">Servicios</a></li>
           <li><a href="alianzas.html">Alianzas</a></li>
           <li><a href="certificaciones.html">Certificaciones</a></li>
+          <li><a href="casos-exito.html">Casos de éxito</a></li>
         </ul>
       </nav>
-      <button class="btn-cta" onclick="window.location.href='contacto.html'">
-        Hablamos de tu datacenter
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <button class="btn-cta nav-cta" onclick="window.location.href='contacto.html'">
+        Contacta con nosotros
       </button>
     </div>
   </header>
@@ -43,113 +111,228 @@
           y alineadas con las mejores prácticas de la industria.
         </p>
 
-        <div class="grid-3">
-          <article class="card">
-            <span class="card-tag">Huawei</span>
-<div class="alliance-logo-box"><img src="logo-huawei.png" alt="Logo"></div>
-            <h3>Infraestructura y redes de alto rendimiento</h3>
-            <p>
-              Soluciones almacenamiento y networking orientadas a entornos exigentes,
-              con arquitecturas escalables y eficientes.
-            </p>
+        <div class="grid-4">
+
+          <article class="card card-sm">
+            <span class="card-tag">xFusion</span>
+            <div class="alliance-logo-box-sm"><img loading="lazy" src="img/logo-xfusion.png" alt="xFusion"></div>
+            <h3>Cómputo eficiente para CPD</h3>
+            <p>Servidores y plataformas de infraestructura con alta relación rendimiento/coste.</p>
             <ul>
-              <li>Almacenamiento y soluciones all-flash</li>
-              <li>Switching, routing y redes de CPD</li>
-			 <li>Diseño de arquitecturas escalables y de HA</li>
+              <li>Servidores para cloud privada y virtualización</li>
+              <li>Arquitecturas híbridas</li>
             </ul>
           </article>
 
-          <article class="card">
-            <span class="card-tag">Oracle</span>
-<div class="alliance-logo-box"><img src="logo-oracle.png" alt="Logo"></div>
-            <h3>Entornos de bases de datos corporativas</h3>
-            <p>
-              Experiencia en diseño y operación de plataformas basadas en tecnologías Oracle.
-            </p>
+          <article class="card card-sm">
+            <span class="card-tag">Veeam</span>
+            <div class="alliance-logo-box-sm"><img loading="lazy" src="img/logo-veeam.png" alt="Veeam"></div>
+            <h3>Backup y continuidad de negocio</h3>
+            <p>Protección y recuperación de datos en entornos virtuales, físicos y cloud.</p>
             <ul>
-              <li>Arquitecturas de BBDD de misión crítica</li>
-              <li>Alta disponibilidad, RAC y replicación</li>
-              <li>Optimización de rendimiento y licenciamiento</li>
+              <li>Backup y DR para sistemas críticos</li>
+              <li>Protección multicloud</li>
             </ul>
           </article>
 
-          <article class="card">
+          <article class="card card-sm">
+            <span class="card-tag">H3C</span>
+            <div class="alliance-logo-box-sm"><img loading="lazy" src="img/logo-h3c.png" alt="H3C"></div>
+            <h3>Networking y switching empresarial</h3>
+            <p>Equipamiento de red para entornos corporativos y de CPD de alto rendimiento.</p>
+            <ul>
+              <li>Switching y routing empresarial</li>
+              <li>Redes de CPD y gestión centralizada</li>
+            </ul>
+          </article>
+
+          <article class="card card-sm">
+            <span class="card-tag">Red Hat</span>
+            <div class="alliance-logo-box-sm"><img loading="lazy" src="img/logo-redhat.png" alt="Red Hat"></div>
+            <h3>Linux y plataformas empresariales</h3>
+            <p>Despliegue y operación de entornos Linux y contenedores en misión crítica.</p>
+            <ul>
+              <li>RHEL, virtualización y OpenShift</li>
+              <li>Orquestación de cargas de trabajo</li>
+            </ul>
+          </article>
+
+          <article class="card card-sm">
+            <span class="card-tag">Infinidat</span>
+            <div class="alliance-logo-box-sm"><img loading="lazy" src="img/logo-infinidat.png" alt="Infinidat"></div>
+            <h3>Almacenamiento empresarial masivo</h3>
+            <p>Plataformas all-flash e híbrido para entornos críticos de alta densidad.</p>
+            <ul>
+              <li>InfiniBox para misión crítica</li>
+              <li>Replicación síncrona y asíncrona</li>
+            </ul>
+          </article>
+
+          <article class="card card-sm">
             <span class="card-tag">Lenovo</span>
-<div class="alliance-logo-box"><img src="logo-lenovo.png" alt="Logo"></div>
-            <h3>Cómputo y soluciones de CPD</h3>
-            <p>
-              Plataformas de servidores y soluciones de infraestructura flexibles, fiables y preparadas
-              para cargas de trabajo modernas.
-            </p>
+            <div class="alliance-logo-box-sm"><img loading="lazy" src="img/logo-lenovo.png" alt="Lenovo"></div>
+            <h3>Servidores y soluciones de CPD</h3>
+            <p>Plataformas flexibles y fiables para cargas de trabajo modernas.</p>
             <ul>
-              <li>Servidores para virtualización y bases de datos</li>
-              <li>Infraestructuras hiperconvergentes</li>
+              <li>Servidores, HCI e infraestructura convergente</li>
               <li>Integración con almacenamiento de terceros</li>
             </ul>
           </article>
 
-          <article class="card">
-            <span class="card-tag">Xfusion</span>
-<div class="alliance-logo-box"><img src="logo-xfusion.png" alt="Logo"></div>
-            <h3>Infraestructura eficiente y competitiva</h3>
-            <p>
-              Soluciones de cómputo y almacenamiento orientadas a maximizar la relación
-              rendimiento/coste en proyectos de CPD.
-            </p>
+          <article class="card card-sm">
+            <span class="card-tag">Huawei</span>
+            <div class="alliance-logo-box-sm"><img loading="lazy" src="img/logo-huawei.png" alt="Huawei"></div>
+            <h3>Infraestructura y redes de alto rendimiento</h3>
+            <p>Almacenamiento y networking escalable para entornos exigentes de CPD.</p>
             <ul>
-              <li>Servidores de propósito general y especializado</li>
-              <li>Plataformas para cloud privada y virtualización</li>
-              <li>Integración en arquitecturas híbridas</li>
+              <li>Soluciones all-flash y switching de CPD</li>
+              <li>Arquitecturas de alta disponibilidad</li>
             </ul>
           </article>
-          <article class="card">
-            <span class="card-tag">Red Hat</span>
-<div class="alliance-logo-box"><img src="logo-redhat.png" alt="Logo"></div>
-            <h3>Plataformas empresariales y entornos Linux</h3>
-            <p>
-              Experiencia en diseño, despliegue y operación de plataformas basadas en tecnologías Red Hat para entornos corporativos y de misión crítica.
-            </p>
+
+          <article class="card card-sm">
+            <span class="card-tag">Dell</span>
+            <div class="alliance-logo-box-sm"><img loading="lazy" src="img/logo-dell.png" alt="Dell"></div>
+            <h3>Infraestructura integral de datacenter</h3>
+            <p>Portfolio completo de servidores, almacenamiento y soluciones HCI.</p>
             <ul>
-              <li>Sistemas Linux empresariales (RHEL)</li>
-              <li>Plataformas de virtualización y contenedores</li>
-              <li>OpenShift y orquestación de cargas de trabajo</li>
+              <li>PowerEdge, PowerStore y PowerMax</li>
+              <li>VxRail HCI e infraestructura convergente</li>
             </ul>
           </article>
-		            <article class="card">
-            <span class="card-tag">Veeam</span>
-<div class="alliance-logo-box"><img src="logo-veeam.png" alt="Logo"></div>
-            <h3>Protección de datos y continuidad del negocio</h3>
-            <p>
-              Soluciones orientadas a la protección, recuperación y disponibilidad de la información en entornos virtuales, físicos y cloud, garantizando la continuidad de los servicios.
-            </p>
+
+          <article class="card card-sm">
+            <span class="card-tag">Microsoft</span>
+            <div class="alliance-logo-box-sm"><img loading="lazy" src="img/logo-microsoft.png" alt="Microsoft"></div>
+            <h3>Cloud, productividad y colaboración</h3>
+            <p>Plataformas Microsoft para el puesto de trabajo, la nube y la seguridad corporativa.</p>
             <ul>
-              <li>Backup y recuperación de sistemas críticos</li>
-              <li>Recuperación ante desastres (DR)</li>
-              <li>Protección de entornos virtualizados y cloud</li>
+              <li>Microsoft 365, Teams y SharePoint</li>
+              <li>Azure, Entra ID y seguridad cloud</li>
             </ul>
           </article>
-		  
+
+          <article class="card card-sm">
+            <span class="card-tag">QNAP</span>
+            <div class="alliance-logo-box-sm"><img loading="lazy" src="img/logo-qnap.png" alt="QNAP"></div>
+            <h3>NAS corporativo y vigilancia IP</h3>
+            <p>Almacenamiento en red y videovigilancia para entornos corporativos.</p>
+            <ul>
+              <li>NAS, backup y archivo de datos</li>
+              <li>Plataformas de grabación IP</li>
+            </ul>
+          </article>
+
+          <article class="card card-sm">
+            <span class="card-tag">Google Cloud</span>
+            <div class="alliance-logo-box-sm"><img loading="lazy" src="img/logo-googlecloud.png" alt="Google Cloud"></div>
+            <h3>Nube pública, colaboración y analítica</h3>
+            <p>Servicios cloud y herramientas de productividad para empresas y equipos distribuidos.</p>
+            <ul>
+              <li>Google Workspace (Gmail, Meet, Drive)</li>
+              <li>Google Cloud Platform y BigQuery</li>
+            </ul>
+          </article>
+
+          <article class="card card-sm">
+            <span class="card-tag">Fortinet</span>
+            <div class="alliance-logo-box-sm"><img loading="lazy" src="img/logo-fortinet.png" alt="Fortinet"></div>
+            <h3>Ciberseguridad y seguridad de red</h3>
+            <p>Plataforma integral para proteger el perímetro y los accesos corporativos.</p>
+            <ul>
+              <li>NGFW FortiGate y SD-WAN segura</li>
+              <li>Zero Trust Network Access (ZTNA)</li>
+            </ul>
+          </article>
+
+          <article class="card card-sm">
+            <span class="card-tag">HP</span>
+            <div class="alliance-logo-box-sm"><img loading="lazy" src="img/logo-hp.png" alt="HP"></div>
+            <h3>Portátiles y equipos para el puesto de trabajo</h3>
+            <p>Dispositivos fiables para usuarios corporativos: portátiles, torres y todo en uno.</p>
+            <ul>
+              <li>Portátiles y torres HP para empresa</li>
+              <li>Soluciones de impresión corporativa</li>
+            </ul>
+          </article>
+
+          <article class="card card-sm">
+            <span class="card-tag">ASUS</span>
+            <div class="alliance-logo-box-sm"><img loading="lazy" src="img/logo-asus.png" alt="ASUS"></div>
+            <h3>Portátiles para usuarios y empresa</h3>
+            <p>Gama de portátiles con buena relación calidad/precio para equipos de trabajo.</p>
+            <ul>
+              <li>Portátiles para uso profesional y educativo</li>
+              <li>Equipos ligeros y de alto rendimiento</li>
+            </ul>
+          </article>
+
+          <article class="card card-sm">
+            <span class="card-tag">TeamViewer</span>
+            <div class="alliance-logo-box-sm"><img loading="lazy" src="img/logo-teamviewer.png" alt="TeamViewer"></div>
+            <h3>Acceso remoto y soporte</h3>
+            <p>Plataforma de acceso remoto seguro y soporte técnico para equipos distribuidos.</p>
+            <ul>
+              <li>Acceso remoto y escritorio virtual</li>
+              <li>Soporte y gestión de dispositivos remotos</li>
+            </ul>
+          </article>
+
+          <article class="card card-sm">
+            <span class="card-tag">Adobe</span>
+            <div class="alliance-logo-box-sm"><img loading="lazy" src="img/logo-adobe.png" alt="Adobe"></div>
+            <h3>Creatividad y documentación digital</h3>
+            <p>Suite de herramientas creativas y de productividad para el entorno corporativo.</p>
+            <ul>
+              <li>Creative Cloud y Acrobat empresarial</li>
+              <li>Gestión de activos digitales y firma electrónica</li>
+            </ul>
+          </article>
+
+          <article class="card card-sm">
+            <span class="card-tag">ESET</span>
+            <div class="alliance-logo-box-sm"><img loading="lazy" src="img/logo-eset.png" alt="ESET"></div>
+            <h3>Ciberseguridad para el endpoint</h3>
+            <p>Protección avanzada contra amenazas para dispositivos, servidores y correo.</p>
+            <ul>
+              <li>Antivirus, EDR y protección de servidor</li>
+              <li>Gestión centralizada y cifrado de endpoints</li>
+            </ul>
+          </article>
+
         </div>
 
-	    <h1 class="section-title">Enfoque Neutral: La mejor solución para cada caso</h1>
+        <h2 class="section-title">Enfoque neutral: la mejor solución para cada caso</h2>
         <p class="section-subtitle">
-              Más allá de las marcas y fabricantes, nuestro trabajo consiste en seleccionar la solución que mejor
-              encaja con las necesidades técnicas, económicas y de soporte de cada proyecto, por ello somos especialistas en diseñar:
-              <br>&emsp;- Comparativas técnicas y funcionales
-              <br>&emsp;- Escenarios de evolución y roadmap
-              <br>&emsp;- Planificación de soporte y mantenimiento
-            </ul>
-            </p>
+          Más allá de las marcas y fabricantes, nuestro trabajo consiste en seleccionar la solución que mejor
+          encaja con las necesidades técnicas, económicas y de soporte de cada proyecto. Somos especialistas en diseñar:
+        </p>
+        <ul class="neutral-list">
+          <li>Comparativas técnicas y funcionales</li>
+          <li>Escenarios de evolución y roadmap</li>
+          <li>Planificación de soporte y mantenimiento</li>
+        </ul>
 
       </div>
-	          <div class="alliances-logos">
-          <img src="logo-huawei.png" alt="Huawei" />
-          <img src="logo-oracle.png" alt="Oracle" />
-          <img src="logo-lenovo.png" alt="Lenovo" />
-          <img src="logo-xfusion.png" alt="Xfusion" />
-		  <img src="logo-redhat.png" alt="Red Hat" />
-          <img src="logo-veeam.png" alt="Veeam" />
-        </div>
+      <div class="alliances-logos">
+        <img loading="lazy" src="img/logo-xfusion.png" alt="xFusion" />
+        <img loading="lazy" src="img/logo-veeam.png" alt="Veeam" />
+        <img loading="lazy" src="img/logo-h3c.png" alt="H3C" />
+        <img loading="lazy" src="img/logo-redhat.png" alt="Red Hat" />
+        <img loading="lazy" src="img/logo-infinidat.png" alt="Infinidat" />
+        <img loading="lazy" src="img/logo-lenovo.png" alt="Lenovo" />
+        <img loading="lazy" src="img/logo-huawei.png" alt="Huawei" />
+        <img loading="lazy" src="img/logo-dell.png" alt="Dell" />
+        <img loading="lazy" src="img/logo-microsoft.png" alt="Microsoft" />
+        <img loading="lazy" src="img/logo-qnap.png" alt="QNAP" />
+        <img loading="lazy" src="img/logo-googlecloud.png" alt="Google Cloud" />
+        <img loading="lazy" src="img/logo-fortinet.png" alt="Fortinet" />
+        <img loading="lazy" src="img/logo-hp.png" alt="HP" />
+        <img loading="lazy" src="img/logo-asus.png" alt="ASUS" />
+        <img loading="lazy" src="img/logo-teamviewer.png" alt="TeamViewer" />
+        <img loading="lazy" src="img/logo-adobe.png" alt="Adobe" />
+        <img loading="lazy" src="img/logo-eset.png" alt="ESET" />
+      </div>
     </section>
 
   </main>
@@ -163,11 +346,41 @@
         <a href="licitaciones.html">Licitaciones</a>
         <a href="certificaciones.html">Certificaciones</a>
         <a href="contacto.html">Contacto</a>
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html">Privacidad</a>
+        <a href="cookies.html">Cookies</a>
       </div>
     </div>
   </footer>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const navToggle = document.querySelector(".nav-toggle");
+    const navUl = document.querySelector("nav ul");
+    if (navToggle && navUl) {
+      navToggle.addEventListener("click", () => {
+        const open = navUl.classList.toggle("open");
+        navToggle.classList.toggle("open", open);
+        navToggle.setAttribute("aria-expanded", open);
+        navToggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+      });
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest("header")) {
+          navUl.classList.remove("open");
+          navToggle.classList.remove("open");
+          navToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
   </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+

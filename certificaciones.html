@@ -1,20 +1,130 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <title>Certificaciones – DC Solutions & Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Certificaciones del equipo de DC Solutions & Services: ITIL, PMP, ISO y certificaciones de bases de datos (OCP, entre otras)." />
+  <meta name="theme-color" content="#008f5a" />
+  <meta name="description" content="Equipo certificado en ITIL, PMP, PRINCE2, Scrum Master, OCP Oracle, ISO 9001, ISO 14001, ISO 27001 y ENS. Más de 15 años en infraestructura IT y AAPP." />
+  <link rel="canonical" href="https://dcss.es/certificaciones.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DC Solutions &amp; Services" />
+  <meta property="og:title" content="Certificaciones – DC Solutions & Services" />
+  <meta property="og:description" content="Equipo certificado en ITIL, PMP, PRINCE2, Scrum Master, OCP Oracle, ISO 9001, ISO 14001, ISO 27001 y ENS. Más de 15 años en infraestructura IT y AAPP." />
+  <meta property="og:url" content="https://dcss.es/certificaciones.html" />
+  <meta property="og:image" content="https://dcss.es/img/og-dcss.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://dcss.es/img/og-dcss.png" />
+  <meta name="twitter:title" content="Certificaciones – DC Solutions & Services" />
+  <meta name="twitter:description" content="Equipo certificado en ITIL, PMP, PRINCE2, Scrum Master, OCP Oracle, ISO 9001, ISO 14001, ISO 27001 y ENS. Más de 15 años en infraestructura IT y AAPP." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <style>
+    .cert-section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--green-dark);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--green-main);
+      display: inline-block;
+    }
+    .cert-grid-compact {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
+      margin-bottom: 2rem;
+    }
+    .cert-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      background: white;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 0.85rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      transition: var(--transition);
+    }
+    .cert-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+      border-color: rgba(0,143,90,0.3);
+    }
+    .cert-card.pending {
+      border-style: dashed;
+      background: #fafcfa;
+      box-shadow: none;
+    }
+    .cert-card.pending:hover {
+      transform: none;
+      box-shadow: none;
+    }
+    .cert-logo {
+      flex-shrink: 0;
+      width: 110px;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cert-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .cert-body { flex: 1; min-width: 0; }
+    .cert-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+    .cert-label {
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--green-dark);
+    }
+    .cert-badge-pending {
+      font-size: 0.66rem;
+      font-weight: 600;
+      background: #fff7e6;
+      color: #a06000;
+      border: 1px solid #f0d090;
+      padding: 0.1rem 0.45rem;
+      border-radius: 999px;
+    }
+    .cert-card h3 {
+      font-size: 0.97rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin: 0 0 0.3rem 0;
+      color: var(--text-main);
+    }
+    .cert-card p {
+      font-size: 0.84rem;
+      color: var(--text-soft);
+      line-height: 1.45;
+      margin: 0;
+    }
+    @media (max-width: 640px) {
+      .cert-grid-compact { grid-template-columns: minmax(0, 1fr); }
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="container navbar">
       <div class="logo">
-        <img src="logo-dcss.svg" alt="DC Solutions &amp; Services" />
+        <img src="img/logo-dcss.svg" alt="DC Solutions &amp; Services" />
         <div class="logo-text">
           <span>Semper Ad Meliora</span>
           <span>Datacenter &amp; Infraestructura</span>
@@ -26,118 +136,140 @@
           <li><a href="servicios.html">Servicios</a></li>
           <li><a href="alianzas.html">Alianzas</a></li>
           <li><a href="certificaciones.html">Certificaciones</a></li>
+          <li><a href="casos-exito.html">Casos de éxito</a></li>
         </ul>
       </nav>
-      <button class="btn-cta" onclick="window.location.href='contacto.html'">
-        Hablemos de tu datacenter
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <button class="btn-cta nav-cta" onclick="window.location.href='contacto.html'">
+        Contacta con nosotros
       </button>
     </div>
   </header>
-  <main>
 
+  <main>
     <section>
       <div class="container">
         <h1 class="section-title">Certificaciones</h1>
         <p class="section-subtitle">
-          Somos un equipo de profesionales con más de 15 años en el sector IT público y contamos con
-          certificaciones de referencia en gestión de servicios, gestión de proyectos, calidad y
-          tecnologías de bases de datos.
+          Equipo con más de 15 años en el sector IT con certificaciones de referencia en gestión de servicios,
+          dirección de proyectos, agilidad y tecnologías de bases de datos.
         </p>
 
-        <div class="cert-grid">
-          <article class="card">
-            <span class="card-tag">ITIL</span>
-			<div class="alliance-logo-box"><img src="logo-itil.png" alt="Logo"></div>
-            <h3>Gestión de servicios de TI</h3>
-            <p>
-              Conocimiento y experiencia en marcos ITIL (v3/v4) para diseñar, operar y mejorar servicios de TI
-              alineados con las necesidades del negocio.
-            </p>
-          </article>
-
-          <article class="card">
-            <span class="card-tag">PMP</span>
-						<div class="alliance-logo-box"><img src="logo-pmp.png" alt="Logo"></div>
-            <h3>Gestión de proyectos</h3>
-            <p>
-              Capacidades de dirección de proyectos bajo el estándar PMP, asegurando planificación,
-              seguimiento y control de riesgos en iniciativas complejas.
-            </p>
-          </article>
-
-
-          <article class="card">
-            <span class="card-tag">OCP / BBDD</span>
-						<div class="alliance-logo-box"><img src="logo-ocp.png" alt="Logo"></div>
-            <h3>Certificaciones de bases de datos</h3>
-            <p>
-              Especialización en tecnologías de bases de datos, incluyendo certificaciones orientadas a
-              administración, optimización y alta disponibilidad.
-            </p>
-          </article>
-		            <article class="card">
-            <span class="card-tag">PRINCE2</span>
-						<div class="alliance-logo-box"><img src="logo-prince2.jpg" alt="Logo"></div>
-            <h3>Gestión de proyectos en entornos estructurados</h3>
-            <p>
-              Aplicación de metodologías PRINCE2 para la planificación, control y ejecución de proyectos complejos, especialmente en entornos regulados y Administración Pública.
-            </p>
-          </article>
-		            </article>
-		            <article class="card">
-            <span class="card-tag">SCRUM MASTER</span>
-						<div class="alliance-logo-box"><img src="logo-scrum.png" alt="Logo"></div>
-            <h3>Gestión ágil de proyectos y equipos</h3>
-            <p>
-              Experiencia en marcos ágiles para coordinar equipos, priorizar entregables y asegurar una evolución continua de los proyectos con foco en valor y resultados.
-            </p>
-          </article>
+        <div style="margin-bottom: 0.6rem;">
+          <span class="cert-section-label">Certificaciones activas</span>
         </div>
 
+        <div class="cert-grid-compact">
 
-      </div>
-	        <div class="container">
-        <h1 class="section-title"> En curso..</h1>
-        <p class="section-subtitle">
-          Estamos en proceso de certificación en estándares clave que avalan nuestra forma de trabajar y nuestro compromiso con la calidad y la seguridad.
-        </p>
-
-        <div class="cert-grid">
-          <article class="card">
-            <span class="card-tag">ISO 9001</span>
-			<div class="alliance-logo-box"><img src="logo-iso9001.png" alt="Logo"></div>
-            <h3>Gestión de la Calidad</h3>
-            <p>
-              Garantizando que nuestros procesos están definidos, controlados y orientados a ofrecer un servicio consistente, fiable y alineado con las expectativas de nuestros clientes.
-            </p>
+          <article class="cert-card">
+            <div class="cert-logo"><img loading="lazy" src="img/logo-itil.png" alt="ITIL"></div>
+            <div class="cert-body">
+              <div class="cert-eyebrow"><span class="cert-label">ITIL v3 / v4</span></div>
+              <h3>Gestión de servicios de TI</h3>
+              <p>Marco de referencia para diseñar, entregar y mejorar servicios IT alineados con el negocio.</p>
+            </div>
           </article>
 
-          <article class="card">
-            <span class="card-tag">ISO 14001</span>
-						<div class="alliance-logo-box"><img src="logo-iso14001.png" alt="Logo"></div>
-            <h3>Gestión Ambiental</h3>
-            <p>
-              Asegurando un compromiso real con el respeto al medio ambiente, integrando prácticas responsables que reducen el impacto ambiental y aportan valor sostenible a nuestros proyectos.
-            </p>
+          <article class="cert-card">
+            <div class="cert-logo"><img loading="lazy" src="img/logo-pmp.png" alt="PMP"></div>
+            <div class="cert-body">
+              <div class="cert-eyebrow"><span class="cert-label">PMP · PMI</span></div>
+              <h3>Dirección de proyectos</h3>
+              <p>Estándar global para la planificación, seguimiento y control de proyectos complejos.</p>
+            </div>
           </article>
 
-          <article class="card">
-            <span class="card-tag">ENS Nivel Medio</span>
-			<div class="alliance-logo-box"><img src="logo-ens.png" alt="Logo"></div>
-            <h3>Seguridad de la Información</h3>
-            <p>
-              Garantizando que nuestros sistemas y servicios cumplen con los requisitos de seguridad exigidos por la Administración Pública, protegiendo la información y asegurando la continuidad y confianza en los servicios prestados.
-            </p>
+          <article class="cert-card">
+            <div class="cert-logo"><img loading="lazy" src="img/logo-prince2.jpg" alt="PRINCE2"></div>
+            <div class="cert-body">
+              <div class="cert-eyebrow"><span class="cert-label">PRINCE2</span></div>
+              <h3>Proyectos en entornos estructurados</h3>
+              <p>Metodología de referencia en entornos regulados y Administración Pública.</p>
+            </div>
+          </article>
+
+          <article class="cert-card">
+            <div class="cert-logo"><img loading="lazy" src="img/logo-scrum.png" alt="Scrum Master"></div>
+            <div class="cert-body">
+              <div class="cert-eyebrow"><span class="cert-label">Scrum Master</span></div>
+              <h3>Gestión ágil de proyectos</h3>
+              <p>Coordinación de equipos ágiles con foco en entregas de valor continuo e iterativo.</p>
+            </div>
+          </article>
+
+          <article class="cert-card">
+            <div class="cert-logo"><img loading="lazy" src="img/logo-ocp.png" alt="OCP"></div>
+            <div class="cert-body">
+              <div class="cert-eyebrow"><span class="cert-label">OCP · Oracle</span></div>
+              <h3>Certificación de bases de datos</h3>
+              <p>Especialización en administración, optimización y alta disponibilidad de bases de datos Oracle.</p>
+            </div>
           </article>
 
         </div>
 
+        <div style="margin-bottom: 0.6rem;">
+          <span class="cert-section-label">En proceso de certificación</span>
+        </div>
 
+        <div class="cert-grid-compact">
+
+          <article class="cert-card pending">
+            <div class="cert-logo"><img loading="lazy" src="img/logo-iso9001.png" alt="ISO 9001"></div>
+            <div class="cert-body">
+              <div class="cert-eyebrow">
+                <span class="cert-label">ISO 9001</span>
+                <span class="cert-badge-pending">En curso</span>
+              </div>
+              <h3>Gestión de la Calidad</h3>
+              <p>Procesos definidos y controlados para ofrecer un servicio consistente y fiable.</p>
+            </div>
+          </article>
+
+          <article class="cert-card pending">
+            <div class="cert-logo"><img loading="lazy" src="img/logo-iso14001.png" alt="ISO 14001"></div>
+            <div class="cert-body">
+              <div class="cert-eyebrow">
+                <span class="cert-label">ISO 14001</span>
+                <span class="cert-badge-pending">En curso</span>
+              </div>
+              <h3>Gestión Ambiental</h3>
+              <p>Integración de prácticas responsables que reducen el impacto ambiental en nuestros proyectos.</p>
+            </div>
+          </article>
+
+          <article class="cert-card pending">
+            <div class="cert-logo"><img loading="lazy" src="img/logo-ens.png" alt="ENS"></div>
+            <div class="cert-body">
+              <div class="cert-eyebrow">
+                <span class="cert-label">ENS Nivel Medio</span>
+                <span class="cert-badge-pending">En curso</span>
+              </div>
+              <h3>Seguridad de la Información</h3>
+              <p>Cumplimiento de los requisitos del Esquema Nacional de Seguridad para entornos de la AAPP.</p>
+            </div>
+          </article>
+
+          <article class="cert-card pending">
+            <div class="cert-logo"><img loading="lazy" src="img/logo-iso27001.png" alt="ISO 27001"></div>
+            <div class="cert-body">
+              <div class="cert-eyebrow">
+                <span class="cert-label">ISO 27001</span>
+                <span class="cert-badge-pending">En curso</span>
+              </div>
+              <h3>Sistema de Gestión de Seguridad de la Información</h3>
+              <p>Marco internacional para proteger la confidencialidad, integridad y disponibilidad de la información.</p>
+            </div>
+          </article>
+
+        </div>
 
       </div>
     </section>
-
   </main>
+
   <footer>
     <div class="container footer-inner">
       <div>
@@ -148,11 +280,39 @@
         <a href="licitaciones.html">Licitaciones</a>
         <a href="certificaciones.html">Certificaciones</a>
         <a href="contacto.html">Contacto</a>
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html">Privacidad</a>
+        <a href="cookies.html">Cookies</a>
       </div>
     </div>
   </footer>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const navToggle = document.querySelector(".nav-toggle");
+    const navUl = document.querySelector("nav ul");
+    if (navToggle && navUl) {
+      navToggle.addEventListener("click", () => {
+        const open = navUl.classList.toggle("open");
+        navToggle.classList.toggle("open", open);
+        navToggle.setAttribute("aria-expanded", open);
+        navToggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+      });
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest("header")) {
+          navUl.classList.remove("open");
+          navToggle.classList.remove("open");
+          navToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
   </script>
 </body>
 </html>
+
+
+
+
+
+
+

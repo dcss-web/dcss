@@ -1,21 +1,111 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <title>Casos de éxito – DC Solutions &amp; Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Casos de éxito de DC Solutions &amp; Services: proyectos de infraestructura, datacenter, seguridad y modernización IT." />
+  <meta name="theme-color" content="#008f5a" />
+  <meta name="description" content="Casos reales de DC Solutions &amp; Services en administraciones públicas y empresas: renovación de licencias Veeam, Adobe y Red Hat, switches Huawei, servicios Microsoft Azure y suministro de equipamiento IT." />
+  <link rel="canonical" href="https://dcss.es/casos-exito.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DC Solutions &amp; Services" />
+  <meta property="og:title" content="Casos de éxito en infraestructura IT – DC Solutions & Services" />
+  <meta property="og:description" content="Casos reales de DC Solutions &amp; Services en administraciones públicas y empresas: renovación de licencias Veeam, Adobe y Red Hat, switches Huawei, servicios Microsoft Azure y suministro de equipamiento IT." />
+  <meta property="og:url" content="https://dcss.es/casos-exito.html" />
+  <meta property="og:image" content="https://dcss.es/img/og-dcss.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://dcss.es/img/og-dcss.png" />
+  <meta name="twitter:title" content="Casos de éxito en infraestructura IT – DC Solutions & Services" />
+  <meta name="twitter:description" content="Casos reales de DC Solutions &amp; Services en administraciones públicas y empresas: renovación de licencias Veeam, Adobe y Red Hat, switches Huawei, servicios Microsoft Azure y suministro de equipamiento IT." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <style>
+    /* =====================================================
+       CASOS DE ÉXITO — estilos de tarjeta
+       Para añadir un nuevo caso, copia el bloque
+       <article class="card card-case"> ... </article>
+       que encontrarás más abajo y rellena los campos:
+         · case-logo-box > img  →  src="img/logo-CLIENTE.png" alt="Nombre cliente"
+         · h3                   →  Nombre del organismo
+         · .case-project        →  Título del proyecto
+         · p                    →  Descripción breve (2-3 líneas)
+         · case-result-pill (×3)→  Resultados clave
+       ===================================================== */
+
+    .grid-3-cases {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 0.7rem;
+    }
+    .card-case {
+      padding: 0.9rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .case-logo-box {
+      width: 100%;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.55rem;
+    }
+    .case-logo-box img {
+      max-height: 100%;
+      max-width: 90%;
+      object-fit: contain;
+    }
+    .card-case h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.15rem;
+      line-height: 1.2;
+      color: var(--text-main);
+    }
+    .case-project {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-soft);
+      margin-bottom: 0.45rem;
+      line-height: 1.3;
+    }
+    .card-case p {
+      font-size: 0.82rem;
+      line-height: 1.5;
+      flex: 1;
+    }
+    .case-results {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.2rem;
+    }
+    .case-result-pill {
+      font-size: 0.71rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      background: #eaf4ef;
+      color: #1a6640;
+      font-weight: 500;
+    }
+    @media (max-width: 900px) {
+      .grid-3-cases { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 480px) {
+      .grid-3-cases { grid-template-columns: minmax(0, 1fr); }
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="container navbar">
       <div class="logo">
-        <img src="logo-dcss.svg" alt="DC Solutions &amp; Services" />
+        <img src="img/logo-dcss.svg" alt="DC Solutions &amp; Services" />
         <div class="logo-text">
           <span>Semper Ad Meliora</span>
           <span>Datacenter &amp; Infraestructura</span>
@@ -30,8 +120,11 @@
           <li><a href="casos-exito.html">Casos de éxito</a></li>
         </ul>
       </nav>
-      <button class="btn-cta" onclick="window.location.href='contacto.html'">
-        Hablemos de tu datacenter
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <button class="btn-cta nav-cta" onclick="window.location.href='contacto.html'">
+        Contacta con nosotros
       </button>
     </div>
   </header>
@@ -41,63 +134,123 @@
       <div class="container">
         <h1 class="section-title">Casos de éxito</h1>
         <p class="section-subtitle">
-          Ejemplos de proyectos representativos (casos demostrativos) que reflejan nuestro enfoque: análisis técnico,
-          ejecución con riesgo controlado y operación estable en entornos exigentes.
+          Organismos públicos y empresas privadas que han confiado en DC Solutions &amp; Services
+          para gestionar su tecnología con rigor, agilidad y un trato directo.
         </p>
 
-        <div class="grid-3">
-          <article class="card">
-		 
-            <span class="card-tag">Infraestructura · CPD · Operación</span>
-            <h3>Optimización integral de sistemas para empresa industrial</h3>
-            <p><strong>Cliente:</strong> Grupo industrial de ámbito nacional (sector manufacturero)</p>
-            <p>
-              <strong>Reto:</strong> infraestructura fragmentada, sistemas heredados y baja visibilidad operativa,
-              con incidencias que afectaban a la continuidad del negocio.
-            </p>
-            <p>
-              <strong>Solución:</strong> rediseño de arquitectura híbrida, virtualización, mejora de ciberseguridad,
-              monitorización proactiva y políticas de respaldo y recuperación.
-            </p>
-            <ul>
-              <li>Reducción del 40 % en incidencias críticas.</li>
-              <li>Mejora de la disponibilidad y trazabilidad operativa.</li>
-              <li>Base técnica preparada para escalar.</li>
-            </ul>
-			 <div class="alliance-logo-box"><img src="casoexito1.jpg" alt="Logo"></div>
+        <div class="grid-3-cases">
+
+          <!-- ═══════════════════════════════════════════
+               CASO 01 — UNED Calatayud
+               ─────────────────────────────────────────
+               PLANTILLA para añadir casos nuevos:
+               Copia desde <article> hasta </article>
+               y rellena: logo (img/logo-CLIENTE.png), h3 (organismo),
+               case-project (título proyecto), p (descripción)
+               y 2 case-result-pill (resultados clave).
+               ═══════════════════════════════════════════ -->
+          <article class="card card-case">
+            <div class="case-logo-box">
+              <img loading="lazy" src="img/logo-uned.png" alt="UNED Calatayud"
+                onerror="this.replaceWith(Object.assign(document.createElement('span'),{style:'font-size:0.85rem;font-weight:700;color:#444;font-family:Rubik,sans-serif',textContent:'UNED CALATAYUD'}))">
+            </div>
+            <h3>UNED Calatayud</h3>
+            <p class="case-project">Renovación de licencias Veeam Backup &amp; Replication</p>
+            <p>Gestión de la renovación anual garantizando la continuidad del soporte oficial y el alineamiento con los requisitos del Esquema Nacional de Seguridad.</p>
+            <div class="case-results">
+              <span class="case-result-pill">Veeam renovado</span>
+              <span class="case-result-pill">Alineación ENS</span>
+            </div>
           </article>
 
-          <article class="card">
-            <span class="card-tag">Nube · Puesto digital · Seguridad</span>
-            <h3>Digitalización y seguridad para empresa de servicios profesionales</h3>
-            <p><strong>Cliente:</strong> Empresa de servicios profesionales (50–100 empleados)</p>
-            <p>
-              <strong>Reto:</strong> habilitar teletrabajo seguro, mejorar colaboración y cumplir requisitos de
-              protección de datos con presupuesto contenido.
-            </p>
-            <p>
-              <strong>Solución:</strong> despliegue de entorno de trabajo en la nube, gestión centralizada de identidades,
-              refuerzo de accesos y formación a usuarios, con soporte gestionado.
-            </p>
-            <ul>
-              <li>Teletrabajo implantado en menos de un mes.</li>
-              <li>Mejora de productividad y colaboración interna.</li>
-              <li>Reducción de costes operativos asociados a infraestructura local.</li>
-            </ul>
+          <!-- CASO 02 — Mutua Navarra -->
+          <article class="card card-case">
+            <div class="case-logo-box">
+              <img loading="lazy" src="img/logo-mutua-navarra.png" alt="Mutua Navarra"
+                onerror="this.replaceWith(Object.assign(document.createElement('span'),{style:'font-size:0.85rem;font-weight:700;color:#444;font-family:Rubik,sans-serif',textContent:'MUTUA NAVARRA'}))">
+            </div>
+            <h3>Mutua Navarra</h3>
+            <p class="case-project">Renovación de licencias Adobe Creative Cloud y Acrobat</p>
+            <p>Gestión centralizada de la renovación anual, unificando el parque de licencias de los equipos de comunicación, diseño y gestión documental bajo un único contrato marco.</p>
+            <div class="case-results">
+              <span class="case-result-pill">Adobe CC</span>
+              <span class="case-result-pill">Renovación anual</span>
+            </div>
           </article>
 
-          <article class="card">
-            <span class="card-tag">¿Tienes un reto similar?</span>
-            <h3>Hablemos de tu caso</h3>
-            <p>
-              Si necesitas modernizar tu CPD, reforzar seguridad, estabilizar BBDD o preparar una licitación,
-              te ayudamos a aterrizar un plan viable y ejecutable.
-            </p>
-            <button class="btn-cta" onclick="window.location.href='contacto.html'">
-              Solicitar una reunión
-            </button>
+          <!-- CASO 03 — Universidad de Oviedo -->
+          <article class="card card-case">
+            <div class="case-logo-box">
+              <img loading="lazy" src="img/logo-uniovi.png" alt="Universidad de Oviedo"
+                onerror="this.replaceWith(Object.assign(document.createElement('span'),{style:'font-size:0.85rem;font-weight:700;color:#444;font-family:Rubik,sans-serif',textContent:'UNIV. OVIEDO'}))">
+            </div>
+            <h3>Universidad de Oviedo</h3>
+            <p class="case-project">Suministro de switches Huawei para red de campus</p>
+            <p>Suministro de switches Huawei CloudEngine para acceso y distribución del campus, con coordinación logística y soporte técnico postventa con garantía oficial del fabricante.</p>
+            <div class="case-results">
+              <span class="case-result-pill">Huawei oficial</span>
+              <span class="case-result-pill">Red renovada</span>
+            </div>
           </article>
+
+          <!-- CASO 04 — Autoridad Portuaria de Avilés -->
+          <article class="card card-case">
+            <div class="case-logo-box">
+              <img loading="lazy" src="img/logo-puerto-aviles.png" alt="Autoridad Portuaria de Avilés"
+                onerror="this.replaceWith(Object.assign(document.createElement('span'),{style:'font-size:0.85rem;font-weight:700;color:#444;font-family:Rubik,sans-serif',textContent:'PTO. AVILÉS'}))">
+            </div>
+            <h3>Autoridad Portuaria de Avilés</h3>
+            <p class="case-project">Renovación de suscripciones Red Hat Enterprise Linux</p>
+            <p>Renovación de suscripciones RHEL para los servidores de producción, asegurando el acceso continuado a actualizaciones de seguridad y soporte técnico certificado por Red Hat.</p>
+            <div class="case-results">
+              <span class="case-result-pill">RHEL oficial</span>
+              <span class="case-result-pill">Cumplimiento ENS</span>
+            </div>
+          </article>
+
+          <!-- CASO 05 — MARE Cantabria -->
+          <article class="card card-case">
+            <div class="case-logo-box">
+              <img loading="lazy" src="img/logo-mare.png" alt="MARE Cantabria"
+                onerror="this.replaceWith(Object.assign(document.createElement('span'),{style:'font-size:0.85rem;font-weight:700;color:#444;font-family:Rubik,sans-serif',textContent:'MARE CANTABRIA'}))">
+            </div>
+            <h3>MARE Cantabria</h3>
+            <p class="case-project">Provisión de servicios Microsoft Azure para nuevos pilotos</p>
+            <p>Suministro de servicios Azure bajo el modelo CSP para dar soporte a nuevas iniciativas tecnológicas, con dimensionamiento de suscripciones y acompañamiento técnico durante la adopción.</p>
+            <div class="case-results">
+              <span class="case-result-pill">Azure CSP</span>
+              <span class="case-result-pill">Pilotos cloud</span>
+            </div>
+          </article>
+
+          <!-- CASO 06 — Ayuntamiento de Alzira -->
+          <article class="card card-case">
+            <div class="case-logo-box">
+              <img loading="lazy" src="img/logo-alzira.png" alt="Ayuntamiento de Alzira"
+                onerror="this.replaceWith(Object.assign(document.createElement('span'),{style:'font-size:0.85rem;font-weight:700;color:#444;font-family:Rubik,sans-serif',textContent:'AYTO. ALZIRA'}))">
+            </div>
+            <h3>Ayuntamiento de Alzira</h3>
+            <p class="case-project">SDA: equipamiento, licencias departamentales y servicios TI</p>
+            <p>Suministro en el marco del SDA municipal: equipamiento informático, licencias de especialización departamental y servicios TI de soporte para las distintas áreas del Ayuntamiento.</p>
+            <div class="case-results">
+              <span class="case-result-pill">Equipamiento IT</span>
+              <span class="case-result-pill">Servicios TI</span>
+            </div>
+          </article>
+
         </div>
+
+        <h2 class="section-title">¿Tienes un reto similar?</h2>
+        <p class="section-subtitle">
+          Si necesitas modernizar tu CPD, reforzar la seguridad, estabilizar bases de datos o preparar una licitación,
+          te ayudamos a aterrizar un plan viable y ejecutable desde el primer día.
+        </p>
+        <div style="text-align:center; margin-top: 1.5rem; margin-bottom: 2rem;">
+          <button class="btn-cta" onclick="window.location.href='contacto.html'">
+            Solicitar una reunión
+          </button>
+        </div>
+
       </div>
     </section>
   </main>
@@ -113,12 +266,45 @@
         <a href="licitaciones.html">Licitaciones</a>
         <a href="certificaciones.html">Certificaciones</a>
         <a href="contacto.html">Contacto</a>
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html">Privacidad</a>
+        <a href="cookies.html">Cookies</a>
       </div>
     </div>
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const navToggle = document.querySelector(".nav-toggle");
+    const navUl = document.querySelector("nav ul");
+    if (navToggle && navUl) {
+      navToggle.addEventListener("click", () => {
+        const open = navUl.classList.toggle("open");
+        navToggle.classList.toggle("open", open);
+        navToggle.setAttribute("aria-expanded", open);
+        navToggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+      });
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest("header")) {
+          navUl.classList.remove("open");
+          navToggle.classList.remove("open");
+          navToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
   </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

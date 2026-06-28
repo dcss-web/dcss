@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dcss.es/sitemap.xml
